@@ -63,24 +63,11 @@ const main = async () => {
         
         const newPair = {'first': first, 'second': second};
       
-        pairs.push(newPair);
-        list.push(first);
+        pairs.push(newPair);    //Part 1
+        list.push(first);   //Part 2
         list.push(second);
         i += 3;
     }
-
-    const firstDivPack = [];
-    const firstDivPackVal = [];
-    firstDivPackVal.push(2);
-    firstDivPack.push(firstDivPackVal);
-
-    const secondDivPack = [];
-    const secondDivPackVal = [];
-    secondDivPackVal.push(6);
-    secondDivPack.push(secondDivPackVal);
-
-    list.push(firstDivPack);
-    list.push(secondDivPack);
 
     let sum = 0;
 
@@ -94,6 +81,19 @@ const main = async () => {
     //console.log(sum)
  
     //Part 2
+    const firstDivPack = [];
+    const firstDivPackVal = [];
+    firstDivPackVal.push(2);
+    firstDivPack.push(firstDivPackVal);
+
+    const secondDivPack = [];
+    const secondDivPackVal = [];
+    secondDivPackVal.push(6);
+    secondDivPack.push(secondDivPackVal);
+
+    list.push(firstDivPack);
+    list.push(secondDivPack);
+
     const sortedList = list.sort((a, b) => compare(a, b));
     const indexOne = sortedList.indexOf(firstDivPack)
     const indexTwo = sortedList.indexOf(secondDivPack)
